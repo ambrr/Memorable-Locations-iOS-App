@@ -26,6 +26,13 @@ class TableViewController: UITableViewController {
             
             places.append(["name": "Ryerson University", "lat": "43.657876" , "lon": "-79.378770"])
             
+            
+            if NSUserDefaults.standardUserDefaults().objectForKey("places") != nil {
+                
+                places = NSUserDefaults.standardUserDefaults().objectForKey("places") as! [Dictionary]
+                
+            }
+            
         }
     }
 
