@@ -172,12 +172,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    
-    
-   
-    
-    
-    
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
