@@ -93,6 +93,26 @@ class TableViewController: UITableViewController {
         
     }
     
+    //Allow user to swipe to delete a location
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            
+            places.removeAtIndex(indexPath.row)
+            
+            //update the dictionary
+            
+            NSUserDefaults.standardUserDefaults().setObject(places, forKey: "places")
+            
+            //reload the table
+            
+            tableView.reloadData()
+            
+            
+        }
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.
